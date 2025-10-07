@@ -45,7 +45,7 @@ export default function EntryEditScreen({ navigation, route }: any) {
         const mimeType = asset.mimeType || (asset.type === "video" ? "video/mp4" : "image/png");
 
         const { error } = await supabase.storage
-          .from("diary-media")
+          .from("galeria")
           .upload(`entries/${fileName}`, decode(asset.base64!), {
             contentType: mimeType,
             upsert: true,
@@ -56,7 +56,7 @@ export default function EntryEditScreen({ navigation, route }: any) {
           return;
         }
 
-        const { data } = supabase.storage.from("diary-media").getPublicUrl(`entries/${fileName}`);
+        const { data } = supabase.storage.from("galeria").getPublicUrl(`entries/${fileName}`);
         setMedia(data.publicUrl);
       } catch (error) {
         Alert.alert("Erro", "Falha ao fazer upload da mídia");
