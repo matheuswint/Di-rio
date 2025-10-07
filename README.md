@@ -70,3 +70,11 @@ A mídia só é visível para o usuário que fez upload (políticas RLS).
 Para vídeos grandes, a performance pode variar dependendo do dispositivo.
 
 Ícones do Expo Vector Icons foram usados para deixar a interface mais intuitiva.
+
+
+
+
+
+
+
+
